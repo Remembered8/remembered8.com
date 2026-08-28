@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <title>Remembered — Every life deserves to be remembered.</title>
+    <meta name="description" content="A dignified, enduring digital archive of human remembrance and living heritage across generations." />
+    <link rel="canonical" href="https://remembered8.com/" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Remembered" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="tr_TR" />
+    <meta property="og:url" content="https://remembered8.com/" />
+    <meta property="og:title" content="Remembered — Every life deserves to be remembered." />
+    <meta property="og:description" content="A dignified, enduring digital archive of human remembrance and living heritage across generations." />
+    <meta property="og:image" content="https://remembered8.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Remembered — Every life deserves to be remembered." />
+    <meta name="twitter:description" content="A dignified, enduring digital archive of human remembrance and living heritage across generations." />
+    <meta name="twitter:image" content="https://remembered8.com/og-image.png" />
+
+    <meta name="theme-color" content="#111111" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Remembered" />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+
+    <!--
+      Google Consent Mode v2 defaults.
+
+      This runs before any tag can load so that a Google tag arriving later
+      never sees an unset consent state. The app's consent module (see
+      src/lib/analytics.ts) only fetches a third-party script after the visitor
+      grants the matching category, so on a fresh visit nothing is requested.
+    -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() { window.dataLayer.push(arguments); }
+      window.gtag = window.gtag || gtag;
+      gtag('consent', 'default', {
+        ad_storage: 'denied',
+        ad_user_data: 'denied',
+        ad_personalization: 'denied',
+        analytics_storage: 'denied',
+        functionality_storage: 'granted',
+        security_storage: 'granted',
+        wait_for_update: 500
+      });
+      gtag('set', 'ads_data_redaction', true);
+      gtag('set', 'url_passthrough', true);
+      window.__rememberedConsentDefaults = true;
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600&family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..800&family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Remembered",
+        "url": "https://remembered8.com/",
+        "description": "A dignified, enduring digital archive of human remembrance and living heritage across generations.",
+        "inLanguage": ["en", "tr"]
+      }
+    </script>
+  </head>
+  <body class="bg-[#F8F8F5] text-[#111111] antialiased selection:bg-black selection:text-white min-h-screen">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
