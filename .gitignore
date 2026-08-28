@@ -10,3 +10,6 @@ Thumbs.db
 .aistudio/
 .vscode/
 .idea/
+
+# Internal commercial material: pricing, margins, partner economics.
+docs/
