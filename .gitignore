@@ -13,3 +13,8 @@ Thumbs.db
 
 # Internal commercial material: pricing, margins, partner economics.
 docs/
+
+# Cloudflare Wrangler local state and dev secrets.
+.wrangler/
+.dev.vars
+worker-configuration.d.ts

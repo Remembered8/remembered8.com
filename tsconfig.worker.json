@@ -1,0 +1,24 @@
+{
+  // The Worker runs on workerd, not in a browser. Its runtime types (Fetcher,
+  // the Workers Response, …) conflict with lib.dom, so the Worker is checked
+  // separately from the client rather than sharing one global type space.
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "lib": [
+      "ES2022"
+    ],
+    "types": [],
+    "skipLibCheck": true,
+    "moduleResolution": "bundler",
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "strict": true,
+    "noEmit": true
+  },
+  "include": [
+    "worker",
+    "src/server",
+    "worker-configuration.d.ts"
+  ]
+}

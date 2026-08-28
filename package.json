@@ -5,11 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
+    "build": "vite build",
     "start": "node dist/server.cjs",
-    "preview": "vite preview",
-    "clean": "rm -rf dist server.js",
-    "lint": "tsc --noEmit"
+    "preview": "wrangler dev",
+    "clean": "rm -rf dist .wrangler",
+    "lint": "wrangler types && tsc -p tsconfig.json --noEmit && tsc -p tsconfig.worker.json --noEmit",
+    "build:node": "vite build && esbuild server.ts --bundle --platform=node --format=cjs --packages=external --sourcemap --outfile=dist/server.cjs",
+    "deploy": "npm run build && wrangler deploy",
+    "types": "wrangler types"
   },
   "dependencies": {
     "@google/genai": "^2.4.0",
@@ -26,6 +29,7 @@
     "vite": "^6.2.3"
   },
   "devDependencies": {
+    "@types/express": "^4.17.21",
     "@types/node": "^22.14.0",
     "autoprefixer": "^10.4.21",
     "esbuild": "^0.25.0",
@@ -33,7 +37,7 @@
     "tsx": "^4.21.0",
     "typescript": "~5.8.2",
     "vite": "^6.2.3",
-    "@types/express": "^4.17.21"
+    "wrangler": "^4.127.0"
   },
   "description": "Remembered - a living digital memory archive. remembered8.com"
 }

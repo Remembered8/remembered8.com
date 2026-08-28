@@ -6,6 +6,12 @@ import {defineConfig} from 'vite';
 export default defineConfig(() => {
   return {
     plugins: [react(), tailwindcss()],
+    build: {
+      // Kept separate from the server bundle so the Cloudflare Worker can point
+      // `assets.directory` at a folder containing only client files.
+      outDir: 'dist/client',
+      emptyOutDir: true,
+    },
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

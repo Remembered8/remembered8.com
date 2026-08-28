@@ -1,0 +1,23 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "remembered8-com",
+  "main": "./worker/index.ts",
+  "compatibility_date": "2026-08-28",
+  // The Gemini SDK reaches for a few Node built-ins.
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "directory": "./dist/client/",
+    "binding": "ASSETS",
+    // Client-side routed SPA: unmatched navigations get index.html, not a 404.
+    "not_found_handling": "single-page-application",
+    // Only the API reaches the Worker; everything else is served as an asset.
+    "run_worker_first": ["/api/*"]
+  },
+  "observability": {
+    "enabled": true
+  },
+  "routes": [
+    { "pattern": "remembered8.com", "custom_domain": true },
+    { "pattern": "www.remembered8.com", "custom_domain": true }
+  ]
+}
