@@ -85,9 +85,11 @@ again.
   satisfy GDPR Art. 13 or KVKK Art. 10.
 - Have the notice reviewed by someone qualified. The text ships as a solid
   starting draft, not as legal advice.
-- Replace `public/favicon.svg` and add `public/icon-192.png`,
-  `public/icon-512.png` (referenced by `manifest.json`) and
-  `public/og-image.png` (1200x630, referenced by the Open Graph tags).
+- Brand assets are in place: `favicon.ico` (16/32/48), `apple-touch-icon.png`
+  (180), `icon-192.png` and `icon-512.png` for the manifest, and
+  `og-image.jpg` (1200x630) for the Open Graph and Twitter cards. The icons are
+  all derived from one 512px master, so replacing that master and re-running the
+  downscales is the way to rebrand.
 
 ## Deployment
 
